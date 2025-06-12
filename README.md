@@ -83,11 +83,11 @@ Follow these steps in order:
     The server will be running at `http://localhost:3000`.
 
 ## Running Tests
-1. To run the automated tests, first set up the test database:
+1. **To run the automated tests, first set up the test database:**
 ```sh
 npm run test:setup
 ```
-2. Then, run the tests:
+2. **Then, run the tests:**
 ```sh
 npm test
 ```
