@@ -82,6 +82,16 @@ Follow these steps in order:
     ```
     The server will be running at `http://localhost:3000`.
 
+## Running Tests
+To run the automated tests, first set up the test database:
+```sh
+npm run test:setup
+```
+Then, run the tests:
+```sh
+npm test
+```
+
 ##  API Endpoints
 
 Here are the main API endpoints available in this project.
