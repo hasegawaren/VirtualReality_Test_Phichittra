@@ -1,11 +1,8 @@
 # P2P Cryptocurrency Exchange API
-
+> A technical assessment project by Phichittra Jeenduang.
 This is the backend API for a peer-to-peer crypto exchange platform, built for a technical assessment.
 
 Users can create advertisements to buy or sell cryptocurrencies with fiat currency, and other users can initiate trades based on these ads. The system records all transaction history.
-
-## ER Diagram
-![ER Diagram](./docs/er_diagram.png)
 
 ## Features
 
@@ -22,6 +19,9 @@ Users can create advertisements to buy or sell cryptocurrencies with fiat curren
 - **Database**: MySQL 8.0
 - **Containerization**: Docker, Docker Compose
 - **Password Hashing**: bcrypt.js
+- 
+## ER Diagram
+![ER Diagram](./docs/er_diagram.png)
 
 ## Prerequisites
 
@@ -109,8 +109,8 @@ Here are the main API endpoints available in this project.
 **2. Create New Advertisement**
 - **Method**: `POST`
 - **URL**: `/api/advertisements`
-- **Description**: สร้างประกาศซื้อ/ขายใหม่
-- **Success Response (200)**:
+- **Description**: Creates a new advertisement.
+- **Success Response (201 Created)**: Returns the newly created advertisement object.
   ```json
   [
     {
@@ -121,12 +121,13 @@ Here are the main API endpoints available in this project.
     "total_amount": "0.25"
     }
   ]
+  
 
 **3. Create New Trade**
 - **Method**: `POST`
 - **URL**: `/api/trades`
-- **Description**: เริ่มทำรายการซื้อขายใหม่โดยอ้างอิงจาก id ของประกาศ
-- **Success Response (200)**:
+- **Description**: Initiates a new trade from an advertisement's ID.
+- **Success Response (201 Created)**: Returns the newly created trade object.
   ```json
   [
     {
@@ -138,15 +139,16 @@ Here are the main API endpoints available in this project.
 **4. Get Trade Details by ID**
 - **Method**: `GET`
 - **URL**: `/api/trades/:id`
-- **Description**: ดูรายละเอียดของรายการซื้อขาย 1 รายการ
-- **URL Parameters**: id (required) - ID ของ Trade ที่ต้องการดู (เช่น /api/trades/1)
+- **Description**: Retrieves the details of a single trade.
+- **URL Parameters**: id (required) - The ID of the trade to update (e.g., /api/trades/1).
+- **Success Response (200)**: Returns the specified trade object with its related data.
 
 **5. Update Trade Status**
 - **Method**: `PATCH`
 - **URL**: `/api/trades/:id`
-- **Description**: อัปเดตสถานะของรายการซื้อขาย
-- **URL Parameters**: id (required) - ID ของ Trade ที่ต้องการดู (เช่น /api/trades/1)
-- **Success Response (200)**:
+- **Description**: Updates the status of a trade.
+- **URL Parameters**: id (required) - The ID of the trade to update (e.g., /api/trades/1).
+- **Success Response (200)**: Returns the updated trade object.
   ```json
   [
     {
