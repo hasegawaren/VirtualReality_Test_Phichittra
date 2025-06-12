@@ -105,3 +105,51 @@ Here are the main API endpoints available in this project.
           "fiat": { "code": "THB" }
       }
   ]
+
+**2. Create New Advertisement**
+- **Method**: `POST`
+- **URL**: `/api/advertisements`
+- **Description**: สร้างประกาศซื้อ/ขายใหม่
+- **Success Response (200)**:
+  ```json
+  [
+    {
+    "type": "SELL",
+    "cryptoCurrencyId": 3,
+    "fiatCurrencyId": 1,
+    "price": "960000.00",
+    "total_amount": "0.25"
+    }
+  ]
+
+**3. Create New Trade**
+- **Method**: `POST`
+- **URL**: `/api/trades`
+- **Description**: เริ่มทำรายการซื้อขายใหม่โดยอ้างอิงจาก id ของประกาศ
+- **Success Response (200)**:
+  ```json
+  [
+    {
+    "adId": 1,
+    "amount": "0.1"
+    }
+  ]
+
+**4. Get Trade Details by ID**
+- **Method**: `GET`
+- **URL**: `/api/trades/:id`
+- **Description**: ดูรายละเอียดของรายการซื้อขาย 1 รายการ
+- **URL Parameters**: id (required) - ID ของ Trade ที่ต้องการดู (เช่น /api/trades/1)
+
+**5. Update Trade Status**
+- **Method**: `PATCH`
+- **URL**: `/api/trades/:id`
+- **Description**: อัปเดตสถานะของรายการซื้อขาย
+- **URL Parameters**: id (required) - ID ของ Trade ที่ต้องการดู (เช่น /api/trades/1)
+- **Success Response (200)**:
+  ```json
+  [
+    {
+    "status": "PAID"
+    }
+  ]
