@@ -18,7 +18,7 @@ Users can create advertisements to buy or sell cryptocurrencies with fiat curren
 - **Database**: MySQL 8.0
 - **Containerization**: Docker, Docker Compose
 - **Password Hashing**: bcrypt.js
-- 
+  
 ## ER Diagram
 ![ER Diagram](./docs/er_diagram.png)
 
