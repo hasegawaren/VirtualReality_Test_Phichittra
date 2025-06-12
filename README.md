@@ -4,6 +4,9 @@ This is the backend API for a peer-to-peer crypto exchange platform, built for a
 
 Users can create advertisements to buy or sell cryptocurrencies with fiat currency, and other users can initiate trades based on these ads. The system records all transaction history.
 
+## ![ER Diagram]
+(./docs/er_diagram.png)ER Diagram
+
 ## Features
 
 - View all active advertisements.
