@@ -4,15 +4,18 @@ This is the backend API for a peer-to-peer crypto exchange platform, built for a
 
 Users can create advertisements to buy or sell cryptocurrencies with fiat currency, and other users can initiate trades based on these ads. The system records all transaction history.
 
-## ✨ Features
+## ![ER Diagram]
+(./docs/er_diagram.png)ER Diagram
+
+## Features
 
 - View all active advertisements.
 - Create new advertisements.
 - Initiate a trade from an existing advertisement.
 - View details of a specific trade.
 - Update the status of a trade (e.g., confirm payment).
-
-## 🛠️ Technologies Used
+  
+## Technologies Used
 
 - **Backend**: Node.js, Express.js
 - **ORM**: Sequelize
@@ -20,12 +23,12 @@ Users can create advertisements to buy or sell cryptocurrencies with fiat curren
 - **Containerization**: Docker, Docker Compose
 - **Password Hashing**: bcrypt.js
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 - Node.js (v18.x or higher)
 - Docker and Docker Compose
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 1.  **Clone the repository**
     ```sh
@@ -55,7 +58,7 @@ Users can create advertisements to buy or sell cryptocurrencies with fiat curren
     ```
     **Important:** The `DB_PASS` and `DB_NAME` values must match what is defined in your `docker-compose.yml` file's environment section.
 
-## ▶️ Running the Project
+## Running the Project
 
 Follow these steps in order:
 
@@ -83,9 +86,6 @@ Follow these steps in order:
 ##  API Endpoints
 
 Here are the main API endpoints available in this project.
-
----
-#### Advertisements
 
 **1. Get All Advertisements**
 - **Method**: `GET`
