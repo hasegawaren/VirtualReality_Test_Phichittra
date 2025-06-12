@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/api/advertisements', adRoutes);
 app.use('/api/trades', tradeRoutes);
 
-app.listen(PORT, async () => {
+const server = app.listen(PORT, async () => {
   console.log(`Server is running on port ${PORT}`);
   try {
     await sequelize.authenticate();
@@ -21,3 +21,6 @@ app.listen(PORT, async () => {
     console.error('Unable to connect to the database:', error);
   }
 });
+
+// เพิ่มส่วนนี้เข้าไปท้ายไฟล์
+module.exports = { app, server };
